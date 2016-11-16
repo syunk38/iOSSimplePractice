@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364D1CDE1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364D1CDD1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift */; };
+		365096961DD6ECB90041D91B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365096951DD6ECB80041D91B /* Tweet.swift */; };
 		36ACD5FB1D8D1E230084A5B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD5FA1D8D1E230084A5B6 /* AppDelegate.swift */; };
-		36ACD5FD1D8D1E230084A5B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD5FC1D8D1E230084A5B6 /* ViewController.swift */; };
+		36ACD5FD1D8D1E230084A5B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD5FC1D8D1E230084A5B6 /* TableViewController.swift */; };
 		36ACD6001D8D1E230084A5B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ACD5FE1D8D1E230084A5B6 /* Main.storyboard */; };
 		36ACD6021D8D1E230084A5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ACD6011D8D1E230084A5B6 /* Assets.xcassets */; };
 		36ACD6051D8D1E230084A5B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ACD6031D8D1E230084A5B6 /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		364D1CDD1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTweetDetailViewController.swift; sourceTree = "<group>"; };
+		365096951DD6ECB80041D91B /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		36ACD5F71D8D1E230084A5B6 /* iOSSimplePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSimplePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ACD5FA1D8D1E230084A5B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36ACD5FC1D8D1E230084A5B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		36ACD5FC1D8D1E230084A5B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		36ACD5FF1D8D1E230084A5B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36ACD6011D8D1E230084A5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36ACD6041D8D1E230084A5B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				36ACD5FA1D8D1E230084A5B6 /* AppDelegate.swift */,
-				36ACD5FC1D8D1E230084A5B6 /* ViewController.swift */,
+				36ACD5FC1D8D1E230084A5B6 /* TableViewController.swift */,
 				36ACD5FE1D8D1E230084A5B6 /* Main.storyboard */,
+				364D1CDD1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift */,
 				36ACD6011D8D1E230084A5B6 /* Assets.xcassets */,
 				36ACD6031D8D1E230084A5B6 /* LaunchScreen.storyboard */,
 				36ACD6061D8D1E230084A5B6 /* Info.plist */,
+				365096951DD6ECB80041D91B /* Tweet.swift */,
 			);
 			path = iOSSimplePractice;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					36ACD5F61D8D1E220084A5B6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = N2QK8QHBC9;
 						ProvisioningStyle = Automatic;
 					};
 					36ACD60A1D8D1E230084A5B6 = {
@@ -259,8 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36ACD5FD1D8D1E230084A5B6 /* ViewController.swift in Sources */,
+				364D1CDE1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift in Sources */,
+				36ACD5FD1D8D1E230084A5B6 /* TableViewController.swift in Sources */,
 				36ACD5FB1D8D1E230084A5B6 /* AppDelegate.swift in Sources */,
+				365096961DD6ECB90041D91B /* Tweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +421,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N2QK8QHBC9;
 				INFOPLIST_FILE = iOSSimplePractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SID.iOSSimplePractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N2QK8QHBC9;
 				INFOPLIST_FILE = iOSSimplePractice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SID.iOSSimplePractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +518,7 @@
 				36ACD6211D8D1E230084A5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36ACD6221D8D1E230084A5B6 /* Build configuration list for PBXNativeTarget "iOSSimplePracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +527,7 @@
 				36ACD6241D8D1E230084A5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36ACD6251D8D1E230084A5B6 /* Build configuration list for PBXNativeTarget "iOSSimplePracticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +536,7 @@
 				36ACD6271D8D1E230084A5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
