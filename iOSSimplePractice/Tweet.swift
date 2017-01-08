@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tweet {
+struct Tweet {
     init(name:String, description:String, icon:String, url:URL?) {
         self.name = name
         self.description = description
