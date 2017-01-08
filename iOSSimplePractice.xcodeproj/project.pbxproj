@@ -101,14 +101,12 @@
 		36ACD5F91D8D1E230084A5B6 /* iOSSimplePractice */ = {
 			isa = PBXGroup;
 			children = (
+				36BCBD1A1E221AE800D96CB2 /* storyboards */,
+				36BCBD191E221ACD00D96CB2 /* viewControllers */,
+				36BCBD171E221AB800D96CB2 /* models */,
 				36ACD5FA1D8D1E230084A5B6 /* AppDelegate.swift */,
-				36ACD5FC1D8D1E230084A5B6 /* TableViewController.swift */,
-				36ACD5FE1D8D1E230084A5B6 /* Main.storyboard */,
-				364D1CDD1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift */,
 				36ACD6011D8D1E230084A5B6 /* Assets.xcassets */,
-				36ACD6031D8D1E230084A5B6 /* LaunchScreen.storyboard */,
 				36ACD6061D8D1E230084A5B6 /* Info.plist */,
-				365096951DD6ECB80041D91B /* Tweet.swift */,
 			);
 			path = iOSSimplePractice;
 			sourceTree = "<group>";
@@ -129,6 +127,32 @@
 				36ACD61C1D8D1E230084A5B6 /* Info.plist */,
 			);
 			path = iOSSimplePracticeUITests;
+			sourceTree = "<group>";
+		};
+		36BCBD171E221AB800D96CB2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				365096951DD6ECB80041D91B /* Tweet.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		36BCBD191E221ACD00D96CB2 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				36ACD5FC1D8D1E230084A5B6 /* TableViewController.swift */,
+				364D1CDD1D8E2BC300B59C07 /* ShowTweetDetailViewController.swift */,
+			);
+			name = viewControllers;
+			sourceTree = "<group>";
+		};
+		36BCBD1A1E221AE800D96CB2 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				36ACD5FE1D8D1E230084A5B6 /* Main.storyboard */,
+				36ACD6031D8D1E230084A5B6 /* LaunchScreen.storyboard */,
+			);
+			name = storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,15 +224,18 @@
 					36ACD5F61D8D1E220084A5B6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = N2QK8QHBC9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					36ACD60A1D8D1E230084A5B6 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 36ACD5F61D8D1E220084A5B6;
 					};
 					36ACD6151D8D1E230084A5B6 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 36ACD5F61D8D1E220084A5B6;
 					};
@@ -370,6 +397,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -412,6 +440,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
