@@ -16,6 +16,7 @@
 		36ACD6051D8D1E230084A5B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ACD6031D8D1E230084A5B6 /* LaunchScreen.storyboard */; };
 		36ACD6101D8D1E230084A5B6 /* iOSSimplePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD60F1D8D1E230084A5B6 /* iOSSimplePracticeTests.swift */; };
 		36ACD61B1D8D1E230084A5B6 /* iOSSimplePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ACD61A1D8D1E230084A5B6 /* iOSSimplePracticeUITests.swift */; };
+		36BCBD1D1E23D8E100D96CB2 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BCBD1C1E23D8E100D96CB2 /* SVProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		36ACD6161D8D1E230084A5B6 /* iOSSimplePracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSimplePracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ACD61A1D8D1E230084A5B6 /* iOSSimplePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSimplePracticeUITests.swift; sourceTree = "<group>"; };
 		36ACD61C1D8D1E230084A5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36BCBD1C1E23D8E100D96CB2 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BCBD1D1E23D8E100D96CB2 /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				36ACD60E1D8D1E230084A5B6 /* iOSSimplePracticeTests */,
 				36ACD6191D8D1E230084A5B6 /* iOSSimplePracticeUITests */,
 				36ACD5F81D8D1E230084A5B6 /* Products */,
+				36BCBD1B1E23D8E000D96CB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +159,14 @@
 			name = storyboards;
 			sourceTree = "<group>";
 		};
+		36BCBD1B1E23D8E000D96CB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36BCBD1C1E23D8E100D96CB2 /* SVProgressHUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +177,7 @@
 				36ACD5F31D8D1E220084A5B6 /* Sources */,
 				36ACD5F41D8D1E220084A5B6 /* Frameworks */,
 				36ACD5F51D8D1E220084A5B6 /* Resources */,
+				36BCBD1E1E23D8F400D96CB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -288,6 +301,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36BCBD1E1E23D8F400D96CB2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36ACD5F31D8D1E220084A5B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -397,7 +427,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -440,7 +469,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -451,6 +479,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2QK8QHBC9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSSimplePractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -465,6 +497,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2QK8QHBC9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSSimplePractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

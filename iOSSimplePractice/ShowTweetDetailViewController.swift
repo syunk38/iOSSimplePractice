@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class ShowTweetDetailViewController: UIViewController {
+class ShowTweetDetailViewController: UIViewController, UIWebViewDelegate {
   
   @IBOutlet weak var closeButton: UIButton!
   @IBOutlet weak var webView: UIWebView!
@@ -18,10 +19,16 @@ class ShowTweetDetailViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    webView.delegate = self
+    SVProgressHUD.show()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
+  }
+  
+  func webViewDidFinishLoad(_ webView: UIWebView) {
+    SVProgressHUD.dismiss()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +37,7 @@ class ShowTweetDetailViewController: UIViewController {
       webView.loadRequest(URLRequest(url: url))
     }
     else {
+      SVProgressHUD.dismiss()
       let alert: UIAlertController = UIAlertController(title: "エラー", message: "urlが見つかりません", preferredStyle: UIAlertControllerStyle.alert)
       let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
         (action: UIAlertAction!) in self.performSegue(withIdentifier: "closeModalManually", sender: self)
