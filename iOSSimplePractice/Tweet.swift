@@ -19,4 +19,16 @@ struct Tweet {
     var description :String
     var icon :String
     var url :URL?
+    
+    static func getTweets() -> [Tweet] {
+        return (1...10).map {
+            if $0 % 2 == 0 {
+                return Tweet(name: "Google", description: "検索サイト", icon: "Google", url: URL(string: "https://www.google.co.jp"))
+            }
+            if $0 % 3 == 0 {
+                return Tweet(name: "nil", description: "空のデータ", icon: "Google", url: nil)
+            }
+            return Tweet(name: "Apple", description: "世界を変える果実", icon: "Apple", url: URL(string: "http://www.apple.com/jp/"))
+        }
+    }
 }

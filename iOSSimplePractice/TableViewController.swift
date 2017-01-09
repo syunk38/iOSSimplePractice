@@ -9,6 +9,8 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    let tweets : Array<Tweet> = Tweet.getTweets()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +21,11 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getTweets().count
+        return tweets.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
-        let tweets = getTweets();
         
         cell.imageView?.image = UIImage( named: tweets[indexPath.row].icon)
         if let url = tweets[indexPath.row].url {
@@ -38,7 +39,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "TweetDetailSeque", sender: getTweets()[indexPath.row])
+        self.performSegue(withIdentifier: "TweetDetailSeque", sender: tweets[indexPath.row])
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -51,14 +52,6 @@ class TableViewController: UITableViewController {
     }
     
     @IBAction func closeModal(segue: UIStoryboardSegue){}
-    
-    private func getTweets() -> [Tweet] {
-        return (1...10).map {
-            if $0 % 2 == 0 {
-                return Tweet(name: "Google", description: "検索サイト", icon: "Google", url: URL(string: "https://www.google.co.jp"))
-            }
-            return Tweet(name: "Apple", description: "世界を変える果実", icon: "Apple", url: URL(string: "http://www.apple.com/jp/"))
-        }
-    }
+    @IBAction func closeModalManually(segue: UIStoryboardSegue){}
 }
 
