@@ -10,8 +10,6 @@ import UIKit
 import SVProgressHUD
 
 class ShowTweetDetailViewController: UIViewController, UIWebViewDelegate {
-  
-  @IBOutlet weak var closeButton: UIButton!
   @IBOutlet weak var webView: UIWebView!
 
   

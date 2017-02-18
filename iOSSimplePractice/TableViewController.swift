@@ -11,6 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
     
     let tweets : Array<Tweet> = Tweet.getTweets()
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
